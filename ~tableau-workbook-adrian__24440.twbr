@@ -1871,7 +1871,7 @@
       </connection>
       <aliases enabled='yes' />
       <column caption='test' datatype='real' name='[Calculation_1719812135586140160]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[electricity_demand]/[population]' />
+        <calculation class='tableau' formula='[electricity_generation]/[population]' />
       </column>
       <column caption='test2' datatype='real' name='[Calculation_1719812135586430977]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[population]*[energy_per_capita]' />
@@ -2523,23 +2523,19 @@
             <datasource caption='World Energy Consumption' name='federated.0p8svje14pck3n1edpbac0elrc45' />
           </datasources>
           <datasource-dependencies datasource='federated.0p8svje14pck3n1edpbac0elrc45'>
-            <column caption='test' datatype='real' name='[Calculation_1719812135586140160]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[electricity_demand]/[population]' />
-            </column>
             <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
               <semantic-values semantic-role='[Country].[Name]'>
                 <semantic-value key='&quot;Czechoslovakia&quot;' value='&quot;Czechia&quot;' />
               </semantic-values>
             </column>
-            <column caption='Electricity Demand' datatype='real' name='[electricity_demand]' role='measure' type='quantitative' />
+            <column caption='Low Carbon Consumption' datatype='real' name='[low_carbon_consumption]' role='measure' type='quantitative' />
             <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
-            <column caption='Per Capita Electricity' datatype='real' name='[per_capita_electricity]' role='measure' type='quantitative' />
-            <column caption='Population' datatype='integer' name='[population]' role='measure' type='quantitative' />
-            <column-instance column='[Calculation_1719812135586140160]' derivation='Sum' name='[sum:Calculation_1719812135586140160:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[per_capita_electricity]' derivation='Sum' name='[sum:per_capita_electricity:qk]' pivot='key' type='quantitative' />
+            <column caption='Nuclear Consumption' datatype='real' name='[nuclear_consumption]' role='measure' type='quantitative' />
+            <column-instance column='[low_carbon_consumption]' derivation='Sum' name='[sum:low_carbon_consumption:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[nuclear_consumption]' derivation='Sum' name='[sum:nuclear_consumption:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0p8svje14pck3n1edpbac0elrc45].[none:country:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0p8svje14pck3n1edpbac0elrc45].[sum:Calculation_1719812135586140160:qk]' shelf='rows' />
+            <shelf-sort-v2 dimension-to-sort='[federated.0p8svje14pck3n1edpbac0elrc45].[none:country:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0p8svje14pck3n1edpbac0elrc45].[sum:low_carbon_consumption:qk]' shelf='rows' />
           </shelf-sorts>
           <aggregation value='true' />
         </view>
@@ -2549,19 +2545,7 @@
           </style-rule>
         </style>
         <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0p8svje14pck3n1edpbac0elrc45].[sum:Calculation_1719812135586140160:qk]'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0p8svje14pck3n1edpbac0elrc45].[sum:per_capita_electricity:qk]'>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -2569,7 +2553,7 @@
           </pane>
         </panes>
         <rows>[federated.0p8svje14pck3n1edpbac0elrc45].[none:country:nk]</rows>
-        <cols>([federated.0p8svje14pck3n1edpbac0elrc45].[sum:Calculation_1719812135586140160:qk] + [federated.0p8svje14pck3n1edpbac0elrc45].[sum:per_capita_electricity:qk])</cols>
+        <cols>[federated.0p8svje14pck3n1edpbac0elrc45].[sum:nuclear_consumption:qk]</cols>
       </table>
       <simple-id uuid='{87FFC37B-8DE5-4061-8E56-854C2836DDBA}' />
     </worksheet>
