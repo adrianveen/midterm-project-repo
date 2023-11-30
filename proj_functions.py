@@ -1,5 +1,5 @@
 from remove_zeros import remove_zeros
-from keyword_col_remove import keyword_col_remove
+from keyword_col_names import keyword_col_names
 from year_filter import year_filter
 
 #remove 0 gdp values
