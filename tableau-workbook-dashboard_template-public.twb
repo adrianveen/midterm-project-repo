@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20233.23.1017.0948                               -->
-<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xml:base='https://vizhub' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
@@ -11,13 +11,16 @@
     <MapboxVectorStylesAndLayers />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
+  <repository-location id='tableau-workbook-dashboard_template' path='/workbooks' revision='1.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -32,7 +35,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='cleanedData_v3' name='textscan.1yhcgps03x6i2a14yceg607tnij5'>
-            <connection class='textscan' directory='C:/Users/Adrian/Documents/LHL_DataScience/W7/Midterm_Project/midterm-project-repo/data' filename='cleanedData_v3.csv' password='' server='' />
+            <connection class='textscan' directory='C:/Users/Adrian/Documents/LHL_DataScience/W7/Midterm_Project/midterm-project-repo/data' filename='cleanedData_v3.csv' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Pivot' type='pivot'>
@@ -257,6 +260,7 @@
             </columns>
           </relation>
         </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
@@ -1658,9 +1662,1295 @@
           <folder-item name='[wind_share_energy]' type='field' />
         </folder>
       </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/Adrian/Documents/LHL_DataScience/W7/Midterm_Project/midterm-project-repo/tableau-workbook-dashboard_template-public.twb Files/Data/Tableau-Project/cleanedData_v3.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='12/01/2023 12:34:26 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='cleanedData_v3' increment-value='%null%' refresh-type='create' rows-inserted='23007' timestamp-start='2023-12-01 00:34:23.719' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>178</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>iso_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[iso_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>iso_code</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>178</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>population</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[population]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>population</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7484</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gdp</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7401</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>biofuel_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[biofuel_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>biofuel_cons_change_pct</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1495</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>biofuel_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[biofuel_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>biofuel_cons_change_twh</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1190</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>biofuel_cons_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[biofuel_cons_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>biofuel_cons_per_capita</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1516</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>biofuel_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[biofuel_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>biofuel_consumption</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1319</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>biofuel_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[biofuel_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>biofuel_share_energy</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>carbon_intensity_elec</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[carbon_intensity_elec]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>carbon_intensity_elec</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3404</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_cons_change_pct</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3966</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_cons_change_twh</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3194</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_cons_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_cons_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_cons_per_capita</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4437</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_consumption</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4080</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_prod_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_prod_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_prod_change_pct</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3634</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_prod_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_prod_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_prod_change_twh</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3287</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_prod_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_prod_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_prod_per_capita</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4024</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_production</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_production]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_production</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3419</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coal_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[coal_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>coal_share_energy</remote-alias>
+              <ordinal>19</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3706</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>electricity_demand</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[electricity_demand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>electricity_demand</remote-alias>
+              <ordinal>20</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3146</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>electricity_generation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[electricity_generation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>electricity_generation</remote-alias>
+              <ordinal>21</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3530</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>electricity_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[electricity_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>electricity_share_energy</remote-alias>
+              <ordinal>22</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3042</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_cons_change_pct</remote-alias>
+              <ordinal>23</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6197</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_cons_change_twh</remote-alias>
+              <ordinal>24</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5611</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_per_capita</remote-alias>
+              <ordinal>25</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7129</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy_per_gdp</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy_per_gdp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy_per_gdp</remote-alias>
+              <ordinal>26</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3920</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fossil_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fossil_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fossil_cons_change_pct</remote-alias>
+              <ordinal>27</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3812</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fossil_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fossil_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fossil_cons_change_twh</remote-alias>
+              <ordinal>28</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3893</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fossil_fuel_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fossil_fuel_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fossil_fuel_consumption</remote-alias>
+              <ordinal>29</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4077</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fossil_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fossil_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fossil_share_energy</remote-alias>
+              <ordinal>30</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3663</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_cons_change_pct</remote-alias>
+              <ordinal>31</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3899</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_cons_change_twh</remote-alias>
+              <ordinal>32</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3807</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_consumption</remote-alias>
+              <ordinal>33</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4070</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_energy_per_capita</remote-alias>
+              <ordinal>34</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4157</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_prod_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_prod_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_prod_change_pct</remote-alias>
+              <ordinal>35</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3590</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_prod_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_prod_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_prod_change_twh</remote-alias>
+              <ordinal>36</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3320</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_prod_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_prod_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_prod_per_capita</remote-alias>
+              <ordinal>37</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4270</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_production</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_production]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_production</remote-alias>
+              <ordinal>38</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3850</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gas_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gas_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gas_share_energy</remote-alias>
+              <ordinal>39</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3831</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>greenhouse_gas_emissions</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[greenhouse_gas_emissions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>greenhouse_gas_emissions</remote-alias>
+              <ordinal>40</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1849</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hydro_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hydro_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hydro_cons_change_pct</remote-alias>
+              <ordinal>41</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3847</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hydro_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hydro_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hydro_cons_change_twh</remote-alias>
+              <ordinal>42</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3434</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hydro_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hydro_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hydro_consumption</remote-alias>
+              <ordinal>43</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3943</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hydro_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hydro_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hydro_energy_per_capita</remote-alias>
+              <ordinal>44</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4146</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hydro_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[hydro_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hydro_share_energy</remote-alias>
+              <ordinal>45</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3521</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_carbon_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_carbon_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_carbon_cons_change_pct</remote-alias>
+              <ordinal>46</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3983</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_carbon_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_carbon_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_carbon_cons_change_twh</remote-alias>
+              <ordinal>47</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3825</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_carbon_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_carbon_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_carbon_consumption</remote-alias>
+              <ordinal>48</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4217</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_carbon_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_carbon_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_carbon_energy_per_capita</remote-alias>
+              <ordinal>49</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4227</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_carbon_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_carbon_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_carbon_share_energy</remote-alias>
+              <ordinal>50</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3663</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nuclear_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nuclear_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nuclear_cons_change_pct</remote-alias>
+              <ordinal>51</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2070</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nuclear_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nuclear_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nuclear_cons_change_twh</remote-alias>
+              <ordinal>52</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1947</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nuclear_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nuclear_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nuclear_consumption</remote-alias>
+              <ordinal>53</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1959</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nuclear_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nuclear_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>nuclear_share_energy</remote-alias>
+              <ordinal>54</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1980</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_cons_change_pct</remote-alias>
+              <ordinal>55</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4362</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_cons_change_twh</remote-alias>
+              <ordinal>56</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4362</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_consumption</remote-alias>
+              <ordinal>57</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4581</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_energy_per_capita</remote-alias>
+              <ordinal>58</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4663</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_prod_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_prod_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_prod_change_pct</remote-alias>
+              <ordinal>59</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3973</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_prod_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_prod_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_prod_change_twh</remote-alias>
+              <ordinal>60</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3450</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_prod_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_prod_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_prod_per_capita</remote-alias>
+              <ordinal>61</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4380</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_production</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_production]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_production</remote-alias>
+              <ordinal>62</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4048</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>oil_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[oil_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>oil_share_energy</remote-alias>
+              <ordinal>63</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3698</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_renewable_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[other_renewable_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_renewable_consumption</remote-alias>
+              <ordinal>64</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1835</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_renewables_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[other_renewables_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_renewables_cons_change_pct</remote-alias>
+              <ordinal>65</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2361</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_renewables_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[other_renewables_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_renewables_cons_change_twh</remote-alias>
+              <ordinal>66</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1066</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>other_renewables_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[other_renewables_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>other_renewables_energy_per_capita</remote-alias>
+              <ordinal>67</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2764</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>per_capita_electricity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[per_capita_electricity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>per_capita_electricity</remote-alias>
+              <ordinal>68</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5317</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_energy_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[primary_energy_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_energy_consumption</remote-alias>
+              <ordinal>69</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7044</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>renewables_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[renewables_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>renewables_cons_change_pct</remote-alias>
+              <ordinal>70</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4045</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>renewables_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[renewables_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>renewables_cons_change_twh</remote-alias>
+              <ordinal>71</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3387</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>renewables_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[renewables_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>renewables_consumption</remote-alias>
+              <ordinal>72</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4187</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>renewables_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[renewables_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>renewables_share_energy</remote-alias>
+              <ordinal>73</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3549</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>solar_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[solar_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>solar_cons_change_pct</remote-alias>
+              <ordinal>74</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1416</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>solar_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[solar_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>solar_cons_change_twh</remote-alias>
+              <ordinal>75</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>477</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>solar_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[solar_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>solar_consumption</remote-alias>
+              <ordinal>76</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>491</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>solar_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[solar_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>solar_energy_per_capita</remote-alias>
+              <ordinal>77</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1442</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>solar_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[solar_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>solar_share_energy</remote-alias>
+              <ordinal>78</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>331</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind_cons_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind_cons_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind_cons_change_pct</remote-alias>
+              <ordinal>79</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1462</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind_cons_change_twh</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind_cons_change_twh]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind_cons_change_twh</remote-alias>
+              <ordinal>80</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>881</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind_consumption</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind_consumption]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind_consumption</remote-alias>
+              <ordinal>81</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>852</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind_energy_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind_energy_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind_energy_per_capita</remote-alias>
+              <ordinal>82</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1974</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>wind_share_energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[wind_share_energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>wind_share_energy</remote-alias>
+              <ordinal>83</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>719</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gdp_per_capita</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[gdp_per_capita]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gdp_per_capita</remote-alias>
+              <ordinal>84</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7401</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>emissions_per_capite</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[emissions_per_capite]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>emissions_per_capite</remote-alias>
+              <ordinal>85</ordinal>
+              <family>cleanedData_v3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4237</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>86</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>87</ordinal>
+              <family>Pivot</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10134</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cleanedData_v3.csv_DD845E464AA844F78838DFC3F53F241A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='false' />
       <style>
         <style-rule element='mark'>
+          <encoding attr='color' field='[none:country:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bahrain&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Kuwait&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Qatar&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;United States&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Iceland&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Norway&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Canada&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Singapore&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[yr:year:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2012</bucket>
+            </map>
+          </encoding>
           <encoding attr='color' field='[:Measure Names]' palette='jewel_bright_10_0' type='palette'>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.0v0y9km1aee1n2188sonz1oav0jj].[avg:low_carbon_consumption:qk]&quot;</bucket>
@@ -1756,38 +3046,6 @@
               <bucket>&quot;[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:other_renewables_cons_change_pct:qk]&quot;</bucket>
             </map>
           </encoding>
-          <encoding attr='color' field='[none:country:nk]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;Bahrain&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;Luxembourg&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;Kuwait&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;United Arab Emirates&quot;</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>&quot;Qatar&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;United States&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;Iceland&quot;</bucket>
-            </map>
-            <map to='#edc948'>
-              <bucket>&quot;Norway&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;Canada&quot;</bucket>
-            </map>
-            <map to='#ff9da7'>
-              <bucket>&quot;Singapore&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:Pivot Field Names:nk]' palette='blue_red_brown_10_0' type='palette'>
             <map to='#466f9d'>
               <bucket>&quot;Fossil Energy Per Capita&quot;</bucket>
@@ -1797,14 +3055,6 @@
             </map>
             <map to='#ed444a'>
               <bucket>&quot;Renewables Energy Per Capita&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[yr:year:ok]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>2015</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>2012</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1928,6 +3178,9 @@
                 </relation>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
           </object>
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
@@ -1938,6 +3191,7 @@
   </mapsources>
   <worksheets>
     <worksheet name='Changes(?)'>
+      <repository-location id='Changes' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2000,6 +3254,7 @@
       <simple-id uuid='{12B30FA7-CAD5-496D-9E9F-FD64EE01C95D}' />
     </worksheet>
     <worksheet name='Consumption Dummy'>
+      <repository-location id='ConsumptionDummy' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2086,6 +3341,7 @@
       <simple-id uuid='{80342694-9A2D-4406-A7DF-FD1770F19E5D}' />
     </worksheet>
     <worksheet name='Energy Share'>
+      <repository-location id='EnergyShare' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2122,6 +3378,7 @@
       <simple-id uuid='{8FD40076-A45A-4FE1-8444-EAB4D89E0C2B}' />
     </worksheet>
     <worksheet name='Map'>
+      <repository-location id='Map' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2165,6 +3422,7 @@
       <simple-id uuid='{532208E5-4039-4DFF-985A-12A6ABF9F5C9}' />
     </worksheet>
     <worksheet name='Sheet 7'>
+      <repository-location id='Sheet7' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2204,6 +3462,7 @@
       <simple-id uuid='{A0805322-B0DC-4F94-8238-34567E18F60C}' />
     </worksheet>
     <worksheet name='consumption per capita'>
+      <repository-location id='consumptionpercapita' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2267,6 +3526,7 @@
       <simple-id uuid='{F5910A54-4D03-43BE-9F4F-A146BB5C9699}' />
     </worksheet>
     <worksheet name='sheet 5'>
+      <repository-location id='sheet5' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <table>
         <view>
           <datasources>
@@ -2331,6 +3591,7 @@
   </worksheets>
   <dashboards>
     <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location id='Dashboard1' path='/workbooks/tableau-workbook-dashboard_template' revision='' />
       <style />
       <size sizing-mode='automatic' />
       <datasources>
@@ -2342,9 +3603,9 @@
       </datasource-dependencies>
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='46061' id='7' param='horz' type-v2='layout-flow' w='99164' x='418' y='53169'>
-            <zone fixed-size='1319' h='46061' id='5' is-fixed='true' type-v2='layout-basic' w='68913' x='418' y='53169'>
-              <zone h='46061' id='9' name='Map' w='37148' x='32183' y='53169'>
+          <zone h='46105' id='7' param='horz' type-v2='layout-flow' w='99264' x='368' y='53172'>
+            <zone fixed-size='1319' h='46105' id='5' is-fixed='true' type-v2='layout-basic' w='60727' x='368' y='53172'>
+              <zone h='46105' id='9' name='Map' w='32736' x='28359' y='53172'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -2352,8 +3613,8 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='46061' id='22' param='vert' type-v2='layout-flow' w='31765' x='418' y='53169'>
-                <zone h='46061' id='3' name='Consumption Dummy' w='31765' x='418' y='53169'>
+              <zone h='46105' id='22' param='vert' type-v2='layout-flow' w='27991' x='368' y='53172'>
+                <zone h='46105' id='3' name='Consumption Dummy' w='27991' x='368' y='53172'>
                   <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2364,7 +3625,7 @@
                 </zone>
               </zone>
             </zone>
-            <zone h='46061' id='11' name='Changes(?)' w='21892' x='69331' y='53169'>
+            <zone h='46105' id='11' name='Changes(?)' w='31171' x='61095' y='53172'>
               <layout-cache minwidth='183' type-h='fixed' type-w='scalable' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
@@ -2373,8 +3634,8 @@
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone fixed-size='160' h='46061' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='8359' x='91223' y='53169'>
-              <zone h='6256' id='10' name='Map' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:primary_energy_consumption:qk]' type-v2='color' w='8359' x='91223' y='53169'>
+            <zone fixed-size='160' h='46105' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='7366' x='92266' y='53172'>
+              <zone h='5877' id='10' name='Map' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:primary_energy_consumption:qk]' type-v2='color' w='7366' x='92266' y='53172'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -2382,7 +3643,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='12127' id='21' name='sheet 5' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:population:qk]' type-v2='size' w='8359' x='91223' y='59425'>
+              <zone h='11392' id='21' name='sheet 5' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:population:qk]' type-v2='size' w='7366' x='92266' y='59049'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -2392,7 +3653,7 @@
               </zone>
             </zone>
           </zone>
-          <zone h='5582' id='12' type-v2='text' w='99164' x='418' y='770'>
+          <zone h='5587' id='12' type-v2='text' w='99264' x='368' y='723'>
             <formatted-text>
               <run bold='true' fontcolor='#000000' fontsize='28'>Dashboard Title</run>
             </formatted-text>
@@ -2403,7 +3664,7 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone h='46817' id='13' name='consumption per capita' w='33054' x='418' y='6352'>
+          <zone h='46862' id='13' name='consumption per capita' w='33087' x='368' y='6310'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -2411,8 +3672,8 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone h='46817' id='14' param='vert' type-v2='layout-flow' w='22467' x='38871' y='6352'>
-            <zone h='15605' id='15' type-v2='text' w='22467' x='38871' y='6352'>
+          <zone h='46862' id='14' param='vert' type-v2='layout-flow' w='22490' x='38859' y='6310'>
+            <zone h='15620' id='15' type-v2='text' w='22490' x='38859' y='6310'>
               <formatted-text>
                 <run fontsize='36'>Total energy consumption</run>
                 <run>Æ&#10;</run>
@@ -2425,7 +3686,7 @@
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone forceUpdate='true' h='15605' id='16' type-v2='text' w='22467' x='38871' y='21957'>
+            <zone forceUpdate='true' h='15620' id='16' type-v2='text' w='22490' x='38859' y='21930'>
               <formatted-text>
                 <run fontsize='36'>total energy production</run>
                 <run>Æ&#10;</run>
@@ -2438,7 +3699,7 @@
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone h='15607' id='17' type-v2='text' w='22467' x='38871' y='37562'>
+            <zone h='15622' id='17' type-v2='text' w='22490' x='38859' y='37550'>
               <formatted-text>
                 <run fontsize='36'>some other stat we want to track/show</run>
                 <run>Æ&#10;&#10;</run>
@@ -2452,7 +3713,7 @@
               </zone-style>
             </zone>
           </zone>
-          <zone h='46817' id='18' mode='slider' name='consumption per capita' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' type-v2='filter' values='database' w='5399' x='33472' y='6352'>
+          <zone h='46862' id='18' mode='slider' name='consumption per capita' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' type-v2='filter' values='database' w='5404' x='33455' y='6310'>
             <zone-style>
               <format attr='border-color' value='#000000' />
               <format attr='border-style' value='none' />
@@ -2460,8 +3721,8 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone h='46817' id='23' param='vert' type-v2='layout-flow' w='38244' x='61338' y='6352'>
-            <zone fixed-size='28' h='3465' id='20' is-fixed='true' mode='slider' name='sheet 5' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' show-readout='false' show-title='false' type-v2='filter' values='relevant' w='38244' x='61338' y='6352'>
+          <zone h='46862' id='23' param='vert' type-v2='layout-flow' w='38283' x='61349' y='6310'>
+            <zone fixed-size='28' h='3255' id='20' is-fixed='true' mode='slider' name='sheet 5' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' show-readout='false' show-title='false' type-v2='filter' values='relevant' w='38283' x='61349' y='6310'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -2469,7 +3730,7 @@
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone h='43352' id='19' name='sheet 5' w='38244' x='61338' y='9817'>
+            <zone h='43607' id='19' name='sheet 5' w='38283' x='61349' y='9565'>
               <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
@@ -2491,9 +3752,9 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98460' id='24' param='vert' type-v2='layout-flow' w='99164' x='418' y='770'>
-                <zone h='5582' id='12' type-v2='text' w='99164' x='418' y='770'>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98554' id='30' param='vert' type-v2='layout-flow' w='99264' x='368' y='723'>
+                <zone h='5587' id='12' type-v2='text' w='99264' x='368' y='723'>
                   <formatted-text>
                     <run bold='true' fontcolor='#000000' fontsize='28'>Dashboard Title</run>
                   </formatted-text>
@@ -2505,7 +3766,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='46817' id='18' mode='slider' name='consumption per capita' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' type-v2='filter' values='database' w='5399' x='33472' y='6352'>
+                <zone h='46862' id='18' mode='slider' name='consumption per capita' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' type-v2='filter' values='database' w='5404' x='33455' y='6310'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2514,7 +3775,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='46817' id='13' is-fixed='true' name='consumption per capita' w='33054' x='418' y='6352'>
+                <zone fixed-size='280' h='46862' id='13' is-fixed='true' name='consumption per capita' w='33087' x='368' y='6310'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2523,7 +3784,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='15605' id='15' type-v2='text' w='22467' x='38871' y='6352'>
+                <zone h='15620' id='15' type-v2='text' w='22490' x='38859' y='6310'>
                   <formatted-text>
                     <run fontsize='36'>Total energy consumption</run>
                     <run>Æ&#10;</run>
@@ -2537,7 +3798,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='28' h='3465' id='20' mode='slider' name='sheet 5' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' show-readout='false' show-title='false' type-v2='filter' values='relevant' w='38244' x='61338' y='6352'>
+                <zone fixed-size='28' h='3255' id='20' mode='slider' name='sheet 5' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]' show-readout='false' show-title='false' type-v2='filter' values='relevant' w='38283' x='61349' y='6310'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2546,7 +3807,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43352' id='19' is-fixed='true' name='sheet 5' w='38244' x='61338' y='9817'>
+                <zone fixed-size='280' h='43607' id='19' is-fixed='true' name='sheet 5' w='38283' x='61349' y='9565'>
                   <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2556,7 +3817,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='12127' id='21' name='sheet 5' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:population:qk]' type-v2='size' w='8359' x='91223' y='59425'>
+                <zone h='11392' id='21' name='sheet 5' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:population:qk]' type-v2='size' w='7366' x='92266' y='59049'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2565,7 +3826,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='15605' id='16' type-v2='text' w='22467' x='38871' y='21957'>
+                <zone forceUpdate='true' h='15620' id='16' type-v2='text' w='22490' x='38859' y='21930'>
                   <formatted-text>
                     <run fontsize='36'>total energy production</run>
                     <run>Æ&#10;</run>
@@ -2579,7 +3840,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='15607' id='17' type-v2='text' w='22467' x='38871' y='37562'>
+                <zone h='15622' id='17' type-v2='text' w='22490' x='38859' y='37550'>
                   <formatted-text>
                     <run fontsize='36'>some other stat we want to track/show</run>
                     <run>Æ&#10;&#10;</run>
@@ -2593,7 +3854,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='46061' id='3' is-fixed='true' name='Consumption Dummy' w='31765' x='418' y='53169'>
+                <zone fixed-size='280' h='46105' id='3' is-fixed='true' name='Consumption Dummy' w='27991' x='368' y='53172'>
                   <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2603,7 +3864,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='46061' id='9' is-fixed='true' name='Map' w='37148' x='32183' y='53169'>
+                <zone fixed-size='280' h='46105' id='9' is-fixed='true' name='Map' w='32736' x='28359' y='53172'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2612,7 +3873,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='6256' id='10' name='Map' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:primary_energy_consumption:qk]' type-v2='color' w='8359' x='91223' y='53169'>
+                <zone h='5877' id='10' name='Map' pane-specification-id='0' param='[federated.0v0y9km1aee1n2188sonz1oav0jj].[sum:primary_energy_consumption:qk]' type-v2='color' w='7366' x='92266' y='53172'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2621,7 +3882,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='46061' id='11' is-fixed='true' name='Changes(?)' w='21892' x='69331' y='53169'>
+                <zone fixed-size='280' h='46105' id='11' is-fixed='true' name='Changes(?)' w='31171' x='61095' y='53172'>
                   <layout-cache minwidth='183' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2646,7 +3907,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Consumption Dummy'>
+    <window class='worksheet' name='Consumption Dummy'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2674,6 +3935,13 @@
         </edge>
       </cards>
       <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[:Measure Names]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:country:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[tyr:year:qk]</field>
+          </color-one-way>
+        </highlight>
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{EBFAF426-A332-4F43-8B0A-C720788EE544}' />
@@ -2704,6 +3972,13 @@
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:country:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
       <simple-id uuid='{66A5F1A1-1E03-4236-90F8-0DA218DEF5A1}' />
     </window>
     <window class='worksheet' name='Energy Share'>
@@ -2727,6 +4002,13 @@
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[tyr:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
       <simple-id uuid='{EA1BDACA-600D-4126-AC68-9167520EB2B8}' />
     </window>
     <window class='worksheet' name='Changes(?)'>
@@ -2751,6 +4033,13 @@
         </edge>
       </cards>
       <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[:Measure Names]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[tyr:year:qk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{1DBAC436-2720-4030-8720-EF719D0AE394}' />
@@ -2783,6 +4072,16 @@
         </edge>
       </cards>
       <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:Calculation_1957095541291692035:qk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:Calculation_1957095541295656964:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:country:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:year:qk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:Calculation_1957095541291692035:ok]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{854F3956-4152-42D2-B9B9-015F19303419}' />
@@ -2815,17 +4114,19 @@
         </edge>
       </cards>
       <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>1965</bucket>
-          </multibucket>
-        </current-page>
         <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:Pivot Field Names:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:country:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{7AF9F546-A215-4DBB-92EB-20D07B043F47}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Changes(?)'>
           <zoom type='entire-view' />
@@ -2843,7 +4144,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='20' />
+      <active id='13' />
       <simple-id uuid='{05FF68F6-E1A9-4FB2-85B7-2283BF7658AD}' />
     </window>
     <window class='worksheet' name='Sheet 7'>
@@ -2872,7 +4173,326 @@
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[none:country:nk]</field>
+            <field>[federated.0v0y9km1aee1n2188sonz1oav0jj].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
       <simple-id uuid='{2F4467CF-21EB-4391-93EF-438AAD290C92}' />
     </window>
   </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Consumption Dummy' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAUSUlEQVR4nO3d2XYcx33H8W/1NvuKnYtESYkV5zixT2I7x7nMyV3eII+Q10ieIbe5s52c
+      KHG8JLZsWbYlS7RiapcpMhQ3cQOJbTD7dFf9c9FDiBQAYkgOQAD9/5wzJM5Ma6YF1q+7uqr6
+      P0ZEBKUyypvWG2mO1FE0tQA456b1VkodmKkFQKmjSAOgMk0DoDJNA6AyTQOgMk0DoDJNA6Ay
+      TQOgMk0DoDJNA6AyTQOgMk0DoDJNA6AyTQOgMi2YbDNhdXWNfOhxZ73LbCWH9fMUcxHWWkql
+      4v7upVL7xExyR9iot8m5P1xmsV4gKNaReICThJXb93jxa1+nVoxwzmGMOYh9VmpqJjoDbLbb
+      2GGXfHGeW8vL1IoBLsgxv7hAr9OhWZkDwPf9fd1ZpaZtojPAJKy1GgB15OhFsMo0DYDKNA2A
+      yjQNgMo0DYDKNA2AyjQNgMo0DYDKNA2AyjQNgMo0DYDKNA2AyjQNgMo0DYDKNA2AyjQNgMo0
+      DYDKNA2AyjQNgMo0DYDKtImqQogIFy5eZL5Z5d7mkHIoWD9HpZAnEcPcTGO/91OpfTFRANaW
+      P+fuaotcrkAp8nHGYNyICx9f4qvf+g7WWpxz+mXZ6siZqCzKsN/j5p1lyoUcG72Ycuiwfp5y
+      Pk/ihLnZppZFUUeS1gVSmaYXwSrTNAAq0zQAKtM0ACrTNAAq0zQAKtM0ACrTNAAq0zQAKtM0
+      ACrTNAAq0zQAKtM0ACrTNAAq0zQAKtM0ACrTNAAq0zQAKtM0ACrTNAAq0yYqi9LvtDh//gLl
+      5gx+kEMGm1g/ouD5+KUqJxdm9ns/ldoXEwXAD0OKuYggjFhbWWV2pk4gCXfv3OGFry5oXSB1
+      ZE0UAJdYomqT+UaFKMxRzRlsUGBx8RTWJlvlULQsijpqtC6QyjS9CFaZpgFQmaYBUJmmAVCZ
+      pgFQmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYB
+      UJmmAVCZNnFZlGs3lpmbbbDeGVCJhMTLUynkSZyj2ajv934qtS8mCkCuWCTpd1nvFsn7MHIe
+      2B5/uPgpf/qtv9ayKOrImqgqRKe1xo2bt8iXa/QHI8qhkAQ5Krk8iRgWF2a1KoQ6krQsiso0
+      vQhWmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYB
+      UJmmAVCZpgFQmaYBUJmmAVCZpgFQmaYBUJm2Y1mU9Xu3WO0IL75wEo+0LtDly1eIKnU8L8CL
+      O1g/RykMISqwND9zwLut1HTsGIBrl8/zzrllTv/D35MDAj+gNrtI5Flu3W3RbJTxXcLn167y
+      x1//ptYFUkfWjgFYOvkiZ1r+Vv9oMOjT7bQpNOvUG3VKOYMLKnztG4vEdoTv5wG0LIo6UsS5
+      7QFwzjIcxYiz3D+eVxqzvNyYBUA7O+ooE+dwt26TvHMWLn+0PQCD9gaf37yNGA/zLPZQqX3i
+      lpcZ/cs/48k64Yka5lS4fRSoWJuhXslx+fwl7LPYS6X2Sfz6q0SnDeELs5hcCOwwDNpZu0ur
+      J/zN3/0t0YHvolL7Q6yFq59g/Ieb/LYAeEGAZ+DG1et6BlDHhr30GV4h2fb8tuK41lqM5+GZ
+      x7sC0OK46jAbfv+7hPbi3mcA3/cfu/ErdZiJc3Dj/LbGD7oUQmWAu/45XtDf8TUNgDr27Ifv
+      4s+WdnxNA6CONRFBrnyMCXa+PtUAqGPN3byFZzd2fV0DoI41e+6dXbs/oAFQx5iIIJ99hIl2
+      /zJUDYA6tmT5LiZZf+Q2GgB1bCXnfk+wUH7kNhoAdWzJlY+3Fr3tRgOgjiW3to4Z3N1zOw2A
+      OpaS984RzBb33E4DoI4lufgBJv/o7g9oANQx5DZamI0bE227+wDpA0b9DtduLrMw12S9PaAc
+      CYmfp5zPk1hLrVp5qh1WapqSd9/FnytMtO1EAfDDHMXQY3mtQ94XukNAWlz79A985Rvf1rIo
+      6lCxF97Hr0U45/bcdqIAtO7dZqUzpFE2tLox5dBhgxynz7xAr92iXpoDtCyKevZcu4PXuoHX
+      qE20/UQBaC49R3PpqfZLqQNhP/mYYGbyu9n1IlgdG25tDXv2l5hyfuL/ZqIzgFKHmcQx8c9+
+      inz0a6JTRYyZvFlvuyn+SelN8dkhoxHJ22eRjRXM0mn8F85gZmcxB3wvuYhg3/+A5NVXCGcs
+      3mMc+e/TAKiJiAju2nWSt34NNz4haPqYQoT0htj1AeIiaC5iZk5glp7De+EFvNlZTLg/nQx7
+      +w7xK9/Fd7fx58pPHD4NgHok6feJz55FPv4dXnwPf6GyY3WFre2dQ3oj3EYfNxQIS1BtQrGG
+      qc9AdQZvaQlvfg6vUX+8fbEWWV0j/s3rmEtnCU5XH7kvk9AAqB3ZGzdIfvULuPkJwWyEKUZP
+      1cUREbAOSRzSGeA6MWIDqM1AZQbTXMDMLOCdPoU3O4NbW8ddv467cwvW70LrHvTW8SLBn69g
+      ctM5s2gA1BYRwX7wIfadX+G1r+MvPvpoP83PxTpkEOM2B7i+xcv7eNUcphCB7+3b9YUGQCGD
+      IfFv30De+w1+cYjXKB74Be2zogHIMLd8l/iN1+Gzdwlmg6fu5hw5IhqArJFuj/jtt5AL7+L1
+      76TdnF1q5hxHYhMYtRGvByWjAcgCSRKSDz/CnXsTs3YVf6GAyYXZOtoDMmjh6h2YqUMUgTE6
+      E3ycSafD6Kc/gUvnCJo+fiWPqUy2SOw4krADS/PwQPA1AMeQJAnxa68h7/2C8GQRc+bRlRGy
+      QIYdZKnwUOMHDcCxsjWM+fN/J2g6vDN6o9J9YjagtrDteQ3AMWFv3SL5wffw3TLhqVLm+veP
+      IvEAmQm3Hf1BA/DMuZVV4v/4Lty5CEEIQQRekP4d5b54zg8xYW78XAR+AFEe/BBZ/hxz+wPC
+      kzWM0e7ONm4NZmZ3fElHgZ4RGQ4Z/fAHmMu/Izhdw3h7H7G3/qlk/IeMfzYcyIztUSQ2xpVX
+      YGlux9f1DHDAxDmSN9/EvfUTwhM5zPOTLwjb6taYrT/UXuI1mGvs+rIG4AAlFy6S/OT7hOU+
+      /vPZWW7wrIhzuHICwe7NXANwAOyVqyQ//yFe7xrRUhVjJivZoZ7ScBWe2/3oDxMGYNjvcOte
+      i2Lg6MSG0PVJ/ByVXB5rfBbnZ6ayv8eNvXyF5Oc/wuteI1yqYqrZnYQ6cCJIYQjho7uYEwUg
+      VyiTj9r4BgatLlGlSCgJn134lK9+8ztaF+hL7OUruNd+jN+7TrBUg0ol/bIG/f0cnOEG7kw1
+      /Z0/4vc+0ShQv9Pi0tUbzM02afdjqjmDDfJUCgXiJKHZqOsoEGA/uzzu6lzHX6ppH/9ZEcG5
+      m8gfLew49v8gHQZ9CiKS3qL35htw+SM8s46/qA3/WZNhB3diBLXqntvqRfBjEhGk3SZ5+23k
+      8oeYjc8JTzcwJ3zg8e5xPbJEkPsTEHCoAi8iiLcB1e3LHnaiAZiQWJuO35//X0zrBsGJGqbh
+      Q2PnGcbjJO1HWxhsghkgBUHGFUhMD+gFkG+CFzz7MCQDZCbas+tzn3aB9iDOkZx7F/frHxHU
+      RniVbAxhirMw3EC8AeRBSh7Ua+k6+i+zFlbXMZsxZhBA2IAgd7BhEEFcgsS3kT9ZBG+ymXEN
+      wC5EBHv+U5KfvUKQb+M3dv+u2eNCRCDuI3YdqQLzdcjlHvdNoNWCjSFmKJjYB3KQq4LnTz0U
+      IgLDNkILaQbprK+vleGe2FYBqFf/C697LR3GPObEWRisIYUYaUbpkX5aDVUERkNod2FgMUOB
+      kYdJ/LRmUJh+jdFjBUMEEQv9FaSUIHMlqDzZ0m8NwJiIIK0W8X/+G97aBfwT1Wffn90v9y9i
+      h22EDlIzMN+AcO+vFJoaa6Hbhe4QM3AQG8wQ8IppKIwBm6TXHs6mf48fElqkbmCu+chlDpPQ
+      ADBemfmjH2Auv0Nw8mBq4Rw0EYFkCHELiRKkBDTKUChO72j/tERgOIBuDzAQ+OB74Ptpt8Yb
+      /zzF/c10AMRa4l++hrz3S8LFCBMdr0ExEYFBC/F6SFGgEqVj40fs32k/iDiwvWwGQJwjee99
+      3G9+TFAZPFFV4cMs7dOvIsUhsliD4t5fF5oFIhbiVch5kAugWM5WALYucP/nFXx3B3/mkNw9
+      JQ9OK/Fkp3gRxMYQr+GqFhabB9unP+TSZr4MS89jHhglOl7n/F2Ic9j/u4R9/b/xep8TnagB
+      h6DxiyBJH5F1pOyllcocX9zp5cYPMWDBWEA88Ma3Tfo58Px08ocW0vDTC8MJx8CzIq09ehdO
+      nnqo8cMxvwYQ57Dvf4B961U8e49gYe+1IQdCBIl7COvIfA4a9cmP+s7BaARxPH7YdHKqXj08
+      F7OHjMQrsNjE5LcPlR7LAIi1JOfO4c7+At/fOFxdnWEb8VvIfGG64+1qR5JswkyEKe98z8qx
+      6AKlox0D7IWLuEvnkRsX8PN9ovkih6Grk85WbiJhGzlZhOqiNvwDILYPFbdr44cjegYQEeh0
+      ST79FHf5Aqxcx2wu4zfzeLXDM+IhIjAaN/yFMpRL2vAPiLgEwnVYeP6RE5pHJgAigqysEv/2
+      DbhxAdO+gz9TwFTyh27GVsTBYB3J95GFStrwj7L7M8fiQEbghkAM+OBXwByuQrtbIz4nzmC8
+      7W1SxJG4IZvx4HAHQESQzU2S3/8e+b/302XIS5VDO2GVNvy18fh7FQpHc+VoOmrSAzoQeOPH
+      eFY2ykOYhyCXLlFor8AghoEDrwLeAa8C3XHf78LJk5jg4YV8IzvgSn/EHVtkRar0TO3wBiA+
+      +zbuw7Npo58vTe07oaZOBLEjSDZwZQsLtcdfQXkIbDV6aUPBh3IVinWMmWxIVZyF7lq6vmco
+      QAn8PLB/X2/00Offv2fBrsHi7LYRn8QOebtjuMqZh7qhhzYA7nv/iDGH9ybyrfXy0QCpBWnN
+      +UMyCjapLxr9JuSDdEVlsTFxo3/EGyODTRj2IE4gdulDAvAK6TzG0wZDBMGB7QL9dGY3H0Kp
+      jgkfPvM6F/O7TsIleenJqkPbJGaj3aWc81ltDymFgvXzFHMR1iaUStPv4xrPPPJu/mchXS/f
+      RVwrXUF5qgr5o7NcWsSl/XfXhVAg56fLJIovPn2jf5AxmEINCg/8bu7PVI+6MOxCkiCxBQtY
+      ASIwURqO+/si49lAsSDjlaFYIE73PR9BsQrR4q5hci7h/c6AS/KVJy+O65yj1+vR3UwQcawP
+      DMgml2/f5cWvfYP8PpRFMSLppM9hIJIe7fM9ZKmIVB6oM3lY9nE3tg+SNnjJBZhCCfIn0hnk
+      +2Qcjv3mBekBY9tBQyAZQdyHUQ+SJJ3NNia97vD8tDvl++MZ8C/dlbZryRnHHzodPnEv4yC9
+      iP+SiQKQjAbcunmDuZkm7UFCOXRYP8fC4iK9TofmuEFMswskxjzzKf2t0ZxiHzmVHtEMh7wq
+      pwjiRmlfPgc0y1B4bsfRkL3f6v6aDMGJw0mCdQkjZxmJEBlDOSxjzBTu9IoK6WNKnQkRx8Vu
+      lw/kZfACvIdeExKxDKydLACFco2/+va3p7NnR8BWwy8NkJd2OmJN+fNckvbFjQ9eCIyPfpjJ
+      L0LFQtKCyEKlAOWT29a9TPo+w6THvdhx10Z0XMiAgKHkGZEjNiGOEEeAR0JzsMJpv82pYEgl
+      KuMdgiFREeFar8U5+xWc+eJ30EtiBlTw/CpBWKVYqB+PmeBpEedguIaUhvvf8EUQNwDaUMlB
+      oZL2cZM47VZZO97GpX3k+xXOvjgogxs/5xsoRlCd3XYBuPduCNaNaMd9bicBt2yJNTnF0Iwn
+      7e63ZTMelgYEQcThGZ8Vs8SKW+KDYUx9sMIJv8PpcEQjLOB5B/+1qyLCrX6Ls8lLWBNtPddJ
+      EkzuZeYKJx/aXgMA46/OXMWVYzjdgNz+1fdJ78xqQRRDvQKl56d7Abrn5zusi+klfVasx90k
+      x7Kr0jbPISZAECyOQRITEyAmwpgQIcCYCM8LwYR4JsK5Pja5RyRdikHAmrfEmsAnQ0tlsEbT
+      61LzYma9EZXAUPDz+F6AMdMfLUsnt0bcG/Z5Kz5DPC5ALCJsxAn54p9Tzm0vYZPpAKQNfwVX
+      d3Bmf++JTbs561D0Ya6BiQ5mWUTapemzaRNWkoB7Ns+a1OiZUzgTISLEWAaJI8GAXyMMmhQK
+      Tap+YYIj+EsMkx7t4S3i+A55BhSDiE1vjk3m0uXcVvDjEQXpUDU9Gl6fhh9T9RxF3yfyc3gm
+      eIzuXjo6NLJD2smIe0nAXZtnVRr0zBlkHDARYS12VMvfIh/ufNP8oZ0HkH/9px2v2p/+je9P
+      XK3i6sD8099YvftHSTpO7fWhNO6iBDvU1Zn65zqGtsfNoeVqUmFV6gxNCQckzjFwlkQC8IoY
+      r0wUzlAI64T+003giQj9ZJPe8DaS3CNkRMH3CXa7ABdHyICCdKiYAVUvpuYlVLwEg+Aw6UMY
+      /wxODB3xuWcLrEuVgSl/MWz6ACeO1dinWf1LIn/3bmFmzgDpwrQuYjaRpg+zMw8PBU7zs9wI
+      bAvyQLMOhfldj6Qijl7SZTNxFDwh7/kEXoTv+cDkoysigpURa8M+n8V5brglOpToWIcjD14J
+      3y8T5qqUggrhPixZMMZQDGsUwxoiLzOyfXqjFZJkDdwmkYkpeP74/w0wHjFFYlNkE7gpjOcF
+      Jvkwdh2OS5xlwxaYq/0Fvvfos/qxD0A6orOBRD1kMQ/1uX3peqQ3WXfB60G5ANUTmC+PVz/A
+      upi1UZeP+wGf2tPE/jzGdQjcJmXTG3cRRlQ9R9lLiIwQGkdohMB4BAZ84+Ebw9BZro98riR1
+      VjhFxxqsVyMMF6iXFvZsBPvBGEMuKJILngOeQ0QY2R7d0SrWruPsJiEjQgORH+BP4TpIRIid
+      ZZMGc7U/w5vgWuP/AdqdpQ7U5Ti7AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      zvsdJwAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
 </workbook>
